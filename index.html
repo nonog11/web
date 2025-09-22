@@ -5,6 +5,7 @@
   <title>nonog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* 全体 */
     body {
       margin: 0;
       padding: 0;
@@ -12,48 +13,87 @@
       color: #FFFFFF;
       font-family: "Helvetica Neue", Arial, sans-serif;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+
+    /* ヘッダー */
     header {
       padding: 60px 20px 40px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
+
+    header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border: 3px solid #FFD700; /* アイコンを縁取り */
+    }
+
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
+
     header p {
       font-size: 1.2rem;
       opacity: 0.9;
+      margin-bottom: 25px;
     }
+
+    /* ボタン */
     .link-btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 12px 25px;
+      padding: 12px 30px;
       background: #1DA1F2;
       color: #fff;
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: bold;
       text-decoration: none;
       border-radius: 30px;
       transition: 0.3s;
     }
+
     .link-btn:hover {
       background: #0d8ddb;
     }
+
+    /* フッター */
     footer {
-      margin-top: 60px;
       padding: 20px;
       font-size: 0.9rem;
       opacity: 0.7;
+      background-color: #333231;
     }
-    a {
-      color: #FFD700; /* リンクをゴールドっぽくすると映える */
+
+    /* レスポンシブ調整 */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .link-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+      header img {
+        width: 80px;
+        height: 80px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="images/icon.png" alt="アイコン" width="40">
+    <img src="images/icon.png" alt="アイコン">
     <h1>nonog</h1>
+    <p>テスト用のWEBページです</p>
     <a class="link-btn" href="https://x.com/nonog11" target="_blank">Twitter (X) を見る</a>
   </header>
 
